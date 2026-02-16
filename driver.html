@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <header style="background:#43a047;color:#fff;">
+    <h1>Driver Dashboard</h1>
+    <nav>
+      <a href="../index.html" style="color:#43a047;">Home</a>
+      <a href="driver-login.html" style="color:#43a047;">Driver Login</a>
+      <a href="admin-login.html" style="color:#43a047;">Admin Login</a>
+    </nav>
+  </header>
+  <main>
+    <!-- TOP SUMMARY (big, bold cards) -->
+    <section class="dashboard-top" aria-label="Performance summary">
+      <div class="summary-cards">
+        <div class="stat-card" id="avg-card" role="region" aria-labelledby="avg-label">
+          <div class="stat-value" id="avg-rating">—</div>
+          <div class="stat-label" id="avg-label">Average Rating</div>
+        </div>
+
+        <div class="stat-card" id="total-card" role="region" aria-labelledby="total-label">
+          <div class="stat-value" id="total-ratings">—</div>
+          <div class="stat-label" id="total-label">Total Ratings</div>
+        </div>
+
+        <div class="stat-card" id="month-card" role="region" aria-labelledby="month-label">
+          <div class="stat-value" id="month-rating">—</div>
+          <div class="stat-sub" id="month-count">—</div>
+          <div class="stat-label" id="month-label">This Month</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="driver-info" style="margin-top:1.5rem;">
+      <!-- Driver info will be loaded here -->
+    </section>
+
+    <section id="ratings" style="margin-top:1.5rem;">
+      <h2>Ratings & Comments</h2>
+      <ul id="ratings-list">
+        <!-- Ratings will be loaded here -->
+      </ul>
+    </section>
+  </main>
+  <script src="driver.js"></script>
+</body>
+</html>

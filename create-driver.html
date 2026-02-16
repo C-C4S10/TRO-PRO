@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add Driver - TRO</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="gov-bg">
+
+<div class="gov-header">
+  <img src="images/cityhall-logo.png" class="logo">
+  <h1>Add Driver</h1>
+  <img src="images/website-logo.png" class="logo">
+</div>
+
+<div class="card">
+  <form action="/add-driver" method="POST">
+    <input type="text" name="name" placeholder="Driver Name" required>
+    <input type="text" name="plate" placeholder="Plate Number" required>
+
+    <select name="type">
+      <option value="Tricycle">Tricycle</option>
+      <option value="Pedicab">Pedicab</option>
+    </select>
+
+    <button type="submit">Save Driver</button>
+  </form>
+
+  <a href="dashboard.html" class="btn">Back</a>
+</div>
+
+</body>
+</html>
