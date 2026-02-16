@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rate Driver — Pedicab</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header style="text-align:center; padding:1rem 0; background:var(--primary); color:#fff;">
+    <h1 style="margin:0">Rate Your Pedicab Driver</h1>
+    <nav style="margin-top:0.5rem;">
+      <a href="index.html">Home</a>
+      <a href="dashboard/driver-login.html">Driver Login</a>
+      <a href="dashboard/admin-login.html">Admin Login</a>
+    </nav>
+  </header>
+
+  <main style="max-width:640px; margin:2rem auto; padding:1.25rem;">
+    <form id="rating-form">
+      <div class="stars" aria-label="Star rating" role="radiogroup">
+        <input type="radio" id="star5" name="rating" value="5"><label for="star5">★</label>
+        <input type="radio" id="star4" name="rating" value="4"><label for="star4">★</label>
+        <input type="radio" id="star3" name="rating" value="3"><label for="star3">★</label>
+        <input type="radio" id="star2" name="rating" value="2"><label for="star2">★</label>
+        <input type="radio" id="star1" name="rating" value="1"><label for="star1">★</label>
+      </div>
+
+      <textarea name="comment" rows="3" placeholder="Leave a comment (optional)" style="width:100%; margin-top:1rem;"></textarea>
+      <div style="margin-top:1rem; display:flex; gap:0.5rem;">
+        <button class="button" type="submit">Submit</button>
+        <div id="result" style="align-self:center;color:#333;"></div>
+      </div>
+    </form>
+  </main>
+
+  <script src="rate.js"></script>
+</body>
+</html>

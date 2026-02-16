@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TODA/PODA Driver Rating</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    :root {
+      --primary-green: #28a745;
+      --dark-green: #006400;
+      --light-green: #90ee90;
+      --red: #cc0000;
+      --text-color: #fff;
+      --bg-light: #f7f7f7;
+    }
+
+    body {
+      margin:0;
+      font-family: Arial, sans-serif;
+      background-color: var(--bg-light);
+      text-align:center;
+    }
+
+    /* HEADER NAV */
+    nav {
+      display:flex;
+      justify-content:center;
+      gap:1rem;
+      background:#fff;
+      padding:0.8rem 0;
+      box-shadow:0 2px 8px rgba(46,125,50,0.06);
+      flex-wrap:wrap;
+    }
+
+    nav a {
+      color: var(--dark-green);
+      font-weight:600;
+      text-decoration:none;
+      margin:0 1rem;
+      font-size:1.1rem;
+    }
+
+    nav a.admin { color:#dc3545; }
+
+    /* CIRCULAR LOGOS */
+    /* LOGO CONTAINER */
+.logo-container {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:1rem 2rem;
+  gap:2rem;
+  flex-wrap:wrap;
+  background: rgb(10, 65, 17);
+
+}
+
+/* CIRCULAR LOGOS */
+.circle-logo {
+  width: 250px;        
+  height: 250px;       
+  border-radius: 50%;  
+  object-fit: cover;   
+  border: 3px solid #fff;   
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: transform 0.3s;
+}
+
+.circle-logo:hover {
+  transform: scale(1.1);
+}
+
+/* CENTER TITLE */
+.header-title {
+  flex:1;
+  text-align:center;
+  color: white;
+  font-size:4rem;
+  font-weight:700;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .logo-container {
+    flex-direction:column;
+    gap:1rem;
+  }
+  .circle-logo {
+    width:80px;
+    height:80px;
+  }
+  .header-title {
+    font-size:1.5rem;
+  }
+}
+
+    /* HERO SECTION */
+    #hero {
+      padding:3rem 1rem;
+      background: rgb(10, 65, 17);
+      color:#fff;
+      text-align:center;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      gap:1rem;
+      border-bottom-left-radius:32px;
+      border-bottom-right-radius:32px;
+      box-shadow: 0 2px 16px rgba(46,125,50,0.08);
+    }
+
+    .button {
+      text-decoration:none;
+      display:inline-block;
+      text-align:center;
+      transition:0.2s;
+      padding:0.8rem 1.5rem;
+      border-radius:8px;
+      font-weight:600;
+    }
+    .btn-primary { background: var(--dark-green); color:#fff; }
+    .btn-light { background: var(--light-green); color:#003300; }
+    .btn-red { background: var(--red); color:#fff; }
+
+    .btn-primary:hover { background:#005700; }
+    .btn-light:hover { background:#66cc66; }
+    .btn-red:hover { background:#990000; }
+
+    /* STEPS SECTION */
+    .steps {
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:1rem;
+      margin-top:1rem;
+    }
+
+    .step-card {
+      flex:1 1 200px;
+      min-width:150px;
+      text-align:center;
+      padding:1rem;
+      border-radius:8px;
+      background:#fff;
+      box-shadow:0 2px 6px rgba(0,0,0,0.1);
+      opacity:0;
+      transform: translateY(50px);
+      transition: all 0.6s ease;
+    }
+
+    .step-card .icon { font-size:2rem; margin-bottom:0.5rem; }
+
+    /* ANIMATION CLASSES */
+    .animate-text { opacity:0; transform: translateY(20px); transition: all 0.6s ease; }
+
+    /* RESPONSIVE */
+    @media(max-width:768px){
+      .logo-container {
+        flex-direction:column;
+        gap:1rem;
+      }
+      .circle-logo {
+        width:80px;
+        height:80px;
+      }
+      .steps { flex-direction:column; gap:1rem; }
+      .step-card { min-width:90%; margin:auto; }
+      .hero-buttons { flex-direction:column; gap:0.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <!-- NAV -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="rate.html">Rate or Complain Driver</a>
+    <a href="dashboard/driver-login.html">Search TODA/PODA Driver</a>
+    <a href="dashboard/admin-login.html" class="admin">Admin Login</a>
+  </nav>
+
+  <!-- LOGOS LEFT/RIGHT -->
+  <div class="logo-container">
+  <img src="C:\TRO NEW\Images\Picture1.png" alt="City hall Logo" class="circle-logo">
+
+  <h1 class="header-title">Tricycle Regulatory Office</h1>
+
+  <img src="C:\TRO NEW\Images\Picture2.png" alt="Website Logo" class="circle-logo">
+</div>
+
+  <!-- HERO -->
+  <div id="hero">
+    <h3 class="animate-text"> Rate Your TODA/PODA Easily with QR Code</h3>
+    <p class="animate-text">Scan. Rate. Improve service quality.</p>
+    <div class="hero-buttons">
+      <a href="rate.html" class="button btn-primary"> Rate or Complain a Driver</a>
+      <a href="dashboard/driver-login.html" class="button btn-light"> Search TODA/PODA Driver</a>
+    </div>
+  </div>
+
+
+  <!-- STEPS -->
+  <main id="main-content">
+    <section class="steps-section" aria-label="How it works" style="margin-top:2rem;">
+      <h2 style="color:var(--primary-green); text-align:center;" class="animate-text">How It Works</h2>
+      <div class="steps">
+        <article class="step-card animate-step">
+          <div class="icon">📱</div>
+          <h3>Scan QR</h3>
+          <p>Scan the QR code on the TODA/PODA with your phone.</p>
+        </article>
+        <article class="step-card animate-step">
+          <div class="icon">⭐</div>
+          <h3>Leave Rating</h3>
+          <p>Quickly give 1–5 stars and optional feedback.</p>
+        </article>
+        <article class="step-card animate-step">
+          <div class="icon">📊</div>
+          <h3>Driver Improves</h3>
+          <p>Drivers receive feedback to improve service.</p>
+        </article>
+      </div>
+    </section>
+
+    <section style="margin-top:2.5rem;">
+      <h2 style="color:var(--light-green);">For Drivers</h2>
+      <ul style="font-size:1.1rem;">
+        <li>Get your own QR code for passengers to rate you.</li>
+        <li>Look at your dashboard to see ratings and comments.</li>
+        <li>Track your average rating and improve your service.</li>
+      </ul>
+    </section>
+    <section style="margin-top:2.5rem;">
+      <h2 style="color:var(--primary);">For Passengers</h2>
+      <ul style="font-size:1.1rem;">
+        <li>Scan the QR code after your ride.</li>
+        <li>Rate your driver and leave feedback.</li>
+        <li>Help improve the quality of pedicab service.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer style="margin-top:3rem; padding:2rem 0; background:#f7f7f7; text-align:center; color:#888; font-size:1rem; border-top:1px solid #e0e7ff;">
+    <div style="margin-bottom:1rem;">
+      <a href="#about" style="margin:0 1rem;color:var(--primary-green);text-decoration:none;">About</a>
+      <a href="#contact" style="margin:0 1rem;color:var(--primary-green);text-decoration:none;">Contact</a>
+      <a href="#privacy" style="margin:0 1rem;color:var(--primary-green);text-decoration:none;">Privacy Policy</a>
+      <a href="#terms" style="margin:0 1rem;color:var(--primary-green);text-decoration:none;">Terms</a>
+      <a href="https://facebook.com/pedicabdriverapp" target="_blank" style="margin:0 1rem;color:var(--primary-green);text-decoration:none;">Facebook Page</a>
+    </div>
+    <div style="margin-bottom:0.5rem;">&copy; 2026 Pedicab Driver Rating App. All rights reserved.</div>
+  </footer>
+
+  <!-- JS Animation -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Animate hero text
+      const heroText = document.querySelectorAll(".animate-text");
+      heroText.forEach((el, i) => {
+        setTimeout(() => {
+          el.style.opacity = 1;
+          el.style.transform = "translateY(0)";
+        }, i * 200);
+      });
+
+      // Animate steps when in viewport
+      const steps = document.querySelectorAll(".animate-step");
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if(entry.isIntersecting){
+            entry.target.style.opacity = 1;
+            entry.target.style.transform = "translateY(0)";
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.3 });
+
+      steps.forEach(step => observer.observe(step));
+    });
+  </script>
+</body>
+</html>
